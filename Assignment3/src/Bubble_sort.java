@@ -2,14 +2,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Bubble_sort{
-    public static int[] Bubble_sort(int[] arr , String asc){
+    public static void Bubble_sort(int[] arr , String asc){
         boolean isAsc = asc.equals("asc");
-        for(int i= 0;i<arr.length;i++){
+        for(int i= 0;i<3;i++){
             for(int j = 0; j<arr.length-1-i;j++){
                 sort(arr, j,isAsc);
             }
+            System.out.println(Arrays.toString(arr));
         }
-        return arr;
     }
     public static void sort(int[] arr, int j,boolean isAsc) {
         boolean swap = false;
@@ -34,14 +34,7 @@ public class Bubble_sort{
         Scanner sc = new Scanner(System.in);
         System.out.print("asc or desc: ");
         String asc =  sc.nextLine();
-        System.out.print("Enter array size: ");
-        int n =  sc.nextInt();
-        int[] arr = new int[n];
-        System.out.print("Enter array elements: ");
-        for(int i=0;i<n;i++){
-            arr[i] = sc.nextInt();
-        }
+        int[] arr = {54,70,93,77,94,22,15,45,40,85};
         Bubble_sort(arr, asc);
-        System.out.println(Arrays.toString(arr));
     }
 }

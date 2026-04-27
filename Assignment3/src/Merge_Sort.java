@@ -10,7 +10,7 @@ public class Merge_Sort {
         int[] right = Arrays.copyOfRange(array, mid, array.length);
 
         System.out.println(indent + "Division: " + Arrays.toString(array) + "  ->  "
-                + Arrays.toString(left) + " и " + Arrays.toString(right));
+                + Arrays.toString(left) + " and " + Arrays.toString(right));
 
         mergeSort(left, indent + "  ");
         mergeSort(right, indent + "  ");
